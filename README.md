@@ -12,6 +12,9 @@ The following techniques were used in this project:
 
 - commander
 - inquirer
+- deep-keys
+- fs-extra
+- chalk
 
 ## Features
 
