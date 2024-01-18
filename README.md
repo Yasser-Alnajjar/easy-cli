@@ -23,15 +23,15 @@ The following techniques were used in this project:
 1. Install:
 
 ```cmd
-npm i easy-cli-cp-cp
+npm i easy-cli-cp
 ```
 or
 ```cmd
-pnpm add easy-cli-cp-cp
+pnpm add easy-cli-cp
 ```
 or
 ```cmd
-yarn add easy-cli-cp-cp
+yarn add easy-cli-cp
 ```
 
 2. Usage:
