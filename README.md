@@ -20,14 +20,20 @@ The following techniques were used in this project:
 - [x] typescript ...
 
 
-1. Clone the repository on your computer:
+1. Install:
 
 ```cmd
-git clone https://github.com/Splash-DT/e-commerce-dashboard.git
+npm i easy-cli-cp
+```
+```cmd
+pnpm add easy-cli-cp
+```
+```cmd
+yarn add easy-cli-cp
 ```
 
-2. Go to your project folder:
+2. Usage:
 
 ```cmd
-cd e-commerce-dashboard
+easy-cli-cp
 ```
