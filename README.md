@@ -37,5 +37,5 @@ yarn add easy-cli-cp
 2. Usage:
 
 ```cmd
-easy-cli-cp-cp
+easy-cli-cp
 ```
