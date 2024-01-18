@@ -1,10 +1,6 @@
 # easy-cli
-<!-- 1.Title -->
-
-# E-commerce-dashboard
 
 Note:
-
 > [!NOTE]
 > This dashboard use node version 20.5.0
 
@@ -18,21 +14,8 @@ This application provides a powerful React application dashboard featuring worki
 
 The following techniques were used in this project:
 
-- React
-- vite
-- pnpm - package manager
-- husky
-- eslint
-- airbnb guid style react
-- React-hook-form
-- React-Router-Dom
-- Sass
-- Axios
-- react-hot-toast
-- react-cookie
-- react-icons
-- i18next
-- i18next-browser-languagedetector
+- commander
+- inquirer
 
 ## Features
 
