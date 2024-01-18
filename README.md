@@ -1,12 +1,8 @@
 # easy-cli
 
-Note:
-> [!NOTE]
-> This dashboard use node version 20.5.0
-
 <!-- 2.Introduction -->
 
-This application provides a powerful React application dashboard featuring working in Vite with HMR and some ESLint rules.
+easy-cli is a very small library that helps you create your component files without having to do it manually.
 
 <!-- 3.Technologies -->
 
@@ -19,8 +15,9 @@ The following techniques were used in this project:
 
 ## Features
 
-- [x] Add ...
-- [ ] Add ....
+- [x] React ...
+- [x] Vue ...
+- [x] typescript ...
 
 <!-- 5.Setup -->
 
