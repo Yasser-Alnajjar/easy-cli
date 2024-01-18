@@ -15,30 +15,30 @@ The following techniques were used in this project:
 
 ## Features
 
+- [x] Config file ...
 - [x] React ...
 - [x] Vue ...
 - [x] typescript ...
-
 
 1. Install:
 
 ```cmd
 npm i easy-cli-cp
 ```
-or
-```cmd
-pnpm add easy-cli-cp
-```
-or
-```cmd
-yarn add easy-cli-cp
-```
 
 2. Usage:
 
-> [!NOTE]
-> You can use an alternative [ g ] shortcut to [ generate ]
+A. Write easy-cli-cp to generate config file
 
 ```cmd
-easy-cli-cp generate
+easy-cli-cp
 ```
+
+B. generate you component:
+
+```cmd
+easy-cli-cp generate <component name>
+```
+
+> [!NOTE]
+> You can use an alternative [ g ] shortcut to [ generate ]
