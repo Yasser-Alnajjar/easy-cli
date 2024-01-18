@@ -25,9 +25,11 @@ The following techniques were used in this project:
 ```cmd
 npm i easy-cli-cp
 ```
+or
 ```cmd
 pnpm add easy-cli-cp
 ```
+or
 ```cmd
 yarn add easy-cli-cp
 ```
