@@ -1,0 +1,6 @@
+{
+  "ts": true,
+  "path": "src/components",
+  "framework": "react",
+  "styleLang": "scss"
+}
