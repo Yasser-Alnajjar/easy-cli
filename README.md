@@ -1,8 +1,8 @@
-# easy-cli
+# easy-cli-cp
 
 <!-- 2.Introduction -->
 
-easy-cli is a very small library that helps you create your component files without having to do it manually.
+easy-cli-cp is a very small library that helps you create your component files without having to do it manually.
 
 <!-- 3.Technologies -->
 
@@ -23,19 +23,19 @@ The following techniques were used in this project:
 1. Install:
 
 ```cmd
-npm i easy-cli-cp
+npm i easy-cli-cp-cp
 ```
 or
 ```cmd
-pnpm add easy-cli-cp
+pnpm add easy-cli-cp-cp
 ```
 or
 ```cmd
-yarn add easy-cli-cp
+yarn add easy-cli-cp-cp
 ```
 
 2. Usage:
 
 ```cmd
-easy-cli-cp
+easy-cli-cp-cp
 ```
