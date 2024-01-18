@@ -40,5 +40,5 @@ yarn add easy-cli-cp
 > You can use an alternative [ g ] shortcut to [ generate ]
 
 ```cmd
-easy-cli-cp generate <component name>
+easy-cli-cp generate
 ```
