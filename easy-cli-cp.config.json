@@ -1,6 +1,6 @@
 {
-  "ts": true,
+  "typescript": false,
   "path": "src/components",
   "framework": "react",
-  "styleLang": "scss"
+  "style": "scss"
 }

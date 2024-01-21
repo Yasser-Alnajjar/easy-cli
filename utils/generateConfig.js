@@ -9,7 +9,7 @@ const { prompt } = inquirer;
 
 const questions = [
   {
-    name: "ts",
+    name: "typescript",
     type: "confirm",
     message: "Do you want to use typescript ?",
   },
@@ -26,7 +26,7 @@ const questions = [
     choices: ["react", "vue"],
   },
   {
-    name: "styleLang",
+    name: "style",
     type: "list",
     message: "What you style language you use ?",
     choices: ["css", "styl", "less", "scss", "none"],
@@ -38,21 +38,17 @@ async function createCLIConfigFile() {
     console.log();
     console.log();
     console.log(
-      chalk.bgWhite(
-        chalk.bold(
-          chalk.magenta(
-            "It looks like this is the first time that you're running easy-cli-cp within this project."
-          )
+      chalk.bold(
+        chalk.magenta(
+          "It looks like this is the first time that you're running easy-cli-cp within this project."
         )
       )
     );
     console.log();
     console.log(
-      chalk.bgWhite(
-        chalk.bold(
-          chalk.magenta(
-            'Answer a few questions to customize easy-cli-cp for your project needs (this will create a "easy-cli-cp.json" config file on the root level of this project).'
-          )
+      chalk.bold(
+        chalk.magenta(
+          'Answer a few questions to customize easy-cli-cp for your project needs (this will create a "easy-cli-cp.config.json" config file on the root level of this project).'
         )
       )
     );
@@ -61,12 +57,12 @@ async function createCLIConfigFile() {
 
     const answers = await prompt(questions);
 
-    outputFileSync("easy-cli-cp.json", JSON.stringify(answers, null, 2));
+    outputFileSync("easy-cli-cp.config.json", JSON.stringify(answers, null, 2));
 
     console.log();
     console.log(
       chalk.cyan(
-        'The "easy-cli-cp.json" config file has been successfully created on the root level of your project.'
+        'The "easy-cli-cp.config.json" config file has been successfully created on the root level of your project.'
       )
     );
 
@@ -74,7 +70,7 @@ async function createCLIConfigFile() {
   } catch (error) {
     console.error(
       chalk.red.bold(
-        'ERROR: Could not create a "easy-cli-cp.json" config file.'
+        'ERROR: Could not create a "easy-cli-cp.config.json" config file.'
       )
     );
     return error;
@@ -97,7 +93,7 @@ async function updateCLIConfigFile(missingConfigQuestions, currentConfigFile) {
     console.log("");
     console.log(
       chalk.cyan(
-        'Please answer a few questions to update the "easy-cli-cp.json" config file.'
+        'Please answer a few questions to update the "easy-cli-cp.config.json" config file.'
       )
     );
     console.log(
@@ -110,12 +106,15 @@ async function updateCLIConfigFile(missingConfigQuestions, currentConfigFile) {
     const answers = await prompt(missingConfigQuestions);
     const updatedAnswers = merge({}, currentConfigFile, answers);
 
-    outputFileSync("easy-cli-cp.json", JSON.stringify(updatedAnswers, null, 2));
+    outputFileSync(
+      "easy-cli-cp.config.json",
+      JSON.stringify(updatedAnswers, null, 2)
+    );
 
     console.log();
     console.log(
       chalk.cyan(
-        'The ("easy-cli-cp.json") has successfully updated for this project.'
+        'The ("easy-cli-cp.config.json") has successfully updated for this project.'
       )
     );
 
@@ -132,7 +131,7 @@ async function updateCLIConfigFile(missingConfigQuestions, currentConfigFile) {
   } catch (error) {
     console.error(
       chalk.red.bold(
-        'ERROR: Could not update the "easy-cli-cp.json" config file.'
+        'ERROR: Could not update the "easy-cli-cp.config.json" config file.'
       )
     );
     return error;
@@ -146,8 +145,10 @@ export async function getCLIConfigFile() {
     // --- Check to see if the config file exists
 
     try {
-      accessSync("./easy-cli-cp.json", constants.R_OK);
-      const currentConfigFile = JSON.parse(readFileSync("./easy-cli-cp.json"));
+      accessSync("./easy-cli-cp.config.json", constants.R_OK);
+      const currentConfigFile = JSON.parse(
+        readFileSync("./easy-cli-cp.config.json")
+      );
 
       const missingConfigQuestions = questions.filter(
         (question) =>

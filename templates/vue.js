@@ -1,7 +1,7 @@
-export default function vueTemplate(ts, lang) {
+export default function vueTemplate(typescript, lang) {
   return `<template>
 </template>
-<script ${ts ? 'lang="ts"' : ""}>
+<script ${typescript ? 'lang="ts"' : ""}>
 export default {
 data() {
   return {}

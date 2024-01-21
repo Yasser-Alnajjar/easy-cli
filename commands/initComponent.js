@@ -14,12 +14,12 @@ const questions = [
     default: () => "src/components",
   },
   {
-    name: "ts",
+    name: "typescript",
     type: "confirm",
     message: "Do you want to use typescript ?",
   },
   {
-    name: "styleLang",
+    name: "style",
     type: "list",
     message: "What you style language you use ?",
     choices: ["css", "styl", "less", "scss", "none"],
@@ -69,7 +69,7 @@ export default function initComponent(cliConfigFile, program) {
           name[0],
           cliConfigFile.framework,
           cliConfigFile.ts,
-          cliConfigFile.styleLang
+          cliConfigFile.style
         );
       } else {
         console.log(`${name[0]} component already exists!`);

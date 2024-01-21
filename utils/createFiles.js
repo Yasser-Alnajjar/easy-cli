@@ -4,13 +4,13 @@ import reactTemplate from "../templates/react.js";
 import vueTemplate from "../templates/vue.js";
 import capitalize from "./capitalize.js";
 
-export default function createFiles(path, name, framework, ts, styleLang) {
+export default function createFiles(path, name, framework, typescript, style) {
   let extension;
   if (framework === "vue") {
     extension = ".vue";
     fs.writeFile(
       `${path}/${capitalize(name)}/index${extension}`,
-      vueTemplate(ts, styleLang),
+      vueTemplate(typescript, style),
       "utf8",
       (error) => {
         if (error !== null) {
@@ -19,7 +19,7 @@ export default function createFiles(path, name, framework, ts, styleLang) {
       }
     );
   } else if (framework === "react") {
-    if (ts) {
+    if (typescript) {
       extension = ".tsx";
     } else {
       extension = ".jsx";
@@ -27,7 +27,7 @@ export default function createFiles(path, name, framework, ts, styleLang) {
 
     fs.writeFile(
       `${path}/${capitalize(name)}/index${extension}`,
-      reactTemplate(ts, name, styleLang),
+      reactTemplate(typescript, name, style),
       "utf8",
       (error) => {
         if (error !== null) {
@@ -35,9 +35,9 @@ export default function createFiles(path, name, framework, ts, styleLang) {
         }
       }
     );
-    if (styleLang !== "none") {
+    if (style !== "none") {
       fs.writeFile(
-        `${path}/${capitalize(name)}/${capitalize(name)}.${styleLang}`,
+        `${path}/${capitalize(name)}/${capitalize(name)}.${style}`,
         ``,
         "utf8",
         (error) => {
