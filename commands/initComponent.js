@@ -68,7 +68,7 @@ export default function initComponent(cliConfigFile, program) {
           path,
           name[0],
           cliConfigFile.framework,
-          cliConfigFile.ts,
+          cliConfigFile.typescript,
           cliConfigFile.style
         );
       } else {

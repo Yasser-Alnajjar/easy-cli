@@ -1,5 +1,5 @@
 {
-  "typescript": false,
+  "typescript": true,
   "path": "src/components",
   "framework": "react",
   "style": "none"
