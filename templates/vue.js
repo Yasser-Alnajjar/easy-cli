@@ -1,4 +1,4 @@
-export default function vueTemplate(typescript, lang) {
+export default function vueTemplate(typescript, style) {
   return `<template>
 </template>
 <script ${typescript ? 'lang="ts"' : ""}>
@@ -8,5 +8,7 @@ data() {
 }
 }
 </script>
-<style ${lang !== "css" ? `lang="${lang}"` : ""}></style>`;
+<style ${
+    style !== "css" || style !== "none" ? `lang="${style}"` : ""
+  }></style>`;
 }

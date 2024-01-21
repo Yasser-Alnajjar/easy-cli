@@ -2,5 +2,5 @@
   "typescript": false,
   "path": "src/components",
   "framework": "react",
-  "style": "scss"
+  "style": "none"
 }
